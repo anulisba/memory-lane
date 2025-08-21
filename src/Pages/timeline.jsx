@@ -1,6 +1,6 @@
 // Timeline.jsx
 import React, { useState, useEffect } from 'react';
-import './Timeline.css';
+import './timeline.css';
 
 const Timeline = () => {
     const [activeYear, setActiveYear] = useState(null);
