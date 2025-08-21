@@ -1,50 +1,50 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 import './landing.css';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const MemorialWebsite = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [visibleCards, setVisibleCards] = useState([]);
-    const navigate = useNavigate();
-    // Sample data - replace with your actual family information
-    const familyMembers = [
-        {
-            id: 1,
-            name: "John Smith",
-            years: "1925-2008",
-            role: "Beloved Grandfather",
-            description: "John was a war veteran and dedicated family man who loved gardening and storytelling.",
-            image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-        },
-        {
-            id: 2,
-            name: "Mary Smith",
-            years: "1930-2015",
-            role: "Loving Grandmother",
-            description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
-            image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-        },
-        // Add more family members as needed
-    ];
-    const viewGllery = () => {
-        navigate('/gallery');
-    }
-    const viewTimeline = () => {
-        navigate('/timeline');
-    }
-    useEffect(() => {
-        // Animation for member cards
-        const timer = setTimeout(() => {
-            setVisibleCards([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
-        }, 100);
+    // const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // const [visibleCards, setVisibleCards] = useState([]);
+    // const navigate = useNavigate();
+    // // Sample data - replace with your actual family information
+    // const familyMembers = [
+    //     {
+    //         id: 1,
+    //         name: "John Smith",
+    //         years: "1925-2008",
+    //         role: "Beloved Grandfather",
+    //         description: "John was a war veteran and dedicated family man who loved gardening and storytelling.",
+    //         image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+    //     },
+    //     {
+    //         id: 2,
+    //         name: "Mary Smith",
+    //         years: "1930-2015",
+    //         role: "Loving Grandmother",
+    //         description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
+    //         image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+    //     },
+    //     // Add more family members as needed
+    // ];
+    // const viewGllery = () => {
+    //     navigate('/gallery');
+    // }
+    // const viewTimeline = () => {
+    //     navigate('/timeline');
+    // }
+    // useEffect(() => {
+    //     // Animation for member cards
+    //     const timer = setTimeout(() => {
+    //         setVisibleCards([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    //     }, 100);
 
-        return () => clearTimeout(timer);
-    }, []);
+    //     return () => clearTimeout(timer);
+    // }, []);
 
     return (
         <div className="memorial-website">
             {/* Header */}
-            <header className="header">
+            {/* <header className="header">
                 <div className="container">
                     <div className="logo">
                         <h1>Smith Family Memorial</h1>
@@ -69,7 +69,7 @@ const MemorialWebsite = () => {
                 </div>
             </header>
 
-            {/* Hero Section */}
+
             <section id="home" className="hero">
                 <div className="hero-content">
                     <h2>In Loving Memory</h2>
@@ -80,7 +80,7 @@ const MemorialWebsite = () => {
                 <div className="hero-overlay"></div>
             </section>
 
-            {/* Family Introduction */}
+
             <section id="family" className="family-intro">
                 <div className="container">
                     <div className="section-title">
@@ -114,7 +114,7 @@ const MemorialWebsite = () => {
                 </div>
             </section>
 
-            {/* Family Members */}
+
             <section id="members" className="family-members">
                 <div className="container">
                     <div className="section-title">
@@ -145,7 +145,7 @@ const MemorialWebsite = () => {
                 </div>
             </section>
 
-            {/* Call to Action */}
+
             <section className="cta-section">
                 <div className="container">
                     <h2>Preserving Our Family Heritage</h2>
@@ -157,13 +157,13 @@ const MemorialWebsite = () => {
                 </div>
             </section>
 
-            {/* Footer */}
+
             <footer className="footer">
                 <div className="container">
                     <p>&copy; {new Date().getFullYear()} Smith Family Memorial. All rights reserved.</p>
                     <p>Created with love by the Smith family</p>
                 </div>
-            </footer>
+            </footer> */}
         </div>
     );
 };
