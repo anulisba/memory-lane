@@ -1,4 +1,4 @@
-/* MemorialWebsite.css */
+/* MemorialWebsite.css - Updated Elegant Theme */
 
 /* Base Styles */
 * {
@@ -10,8 +10,10 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    color: #4B3F36;
+    /* dark brown text */
+    background-color: #FFF8F0;
+    /* warm cream */
 }
 
 .container {
@@ -27,8 +29,9 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(245, 240, 225, 0.95);
+    /* soft beige */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     z-index: 1000;
     padding: 15px 0;
 }
@@ -40,8 +43,9 @@ body {
 }
 
 .logo h1 {
-    font-size: 1.5rem;
-    color: #2c3e50;
+    font-size: 1.6rem;
+    color: #8B5E3C;
+    /* warm brown */
     font-weight: 600;
 }
 
@@ -56,13 +60,15 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: #2c3e50;
+    color: #7A715C;
+    /* taupe */
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav a:hover {
-    color: #16a085;
+    color: #C4A69F;
+    /* dusty rose accent */
 }
 
 .menu-toggle {
@@ -76,22 +82,23 @@ body {
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background-color: #2c3e50;
+    background-color: #7A715C;
     margin: 3px 0;
     transition: 0.3s;
 }
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #FFF8F0 0%, #EDE1D0 100%);
     text-align: center;
-    color: #2c3e50;
+    color: #4B3F36;
     margin-top: 60px;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -105,37 +112,40 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 10px;
-    animation: fadeInDown 1s ease;
+    color: #7A715C;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
-    animation: fadeInDown 1s ease 0.2s both;
+    font-weight: 700;
+    color: #8B5E3C;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    animation: fadeInDown 1s ease 0.4s both;
+    color: #7A715C;
 }
 
 .cta-button {
     padding: 12px 30px;
-    background-color: #16a085;
-    color: white;
+    background-color: #8B5E3C;
+    /* warm brown */
+    color: #FFF8F0;
+    /* soft beige text */
     border: none;
     border-radius: 30px;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    animation: fadeIn 1s ease 0.6s both;
+    box-shadow: 0 5px 15px rgba(139, 94, 60, 0.4);
 }
 
 .cta-button:hover {
-    background-color: #1abc9c;
+    background-color: #A67C57;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(139, 94, 60, 0.5);
 }
 
 .hero-overlay {
@@ -144,7 +154,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 248, 240, 0.3);
 }
 
 /* Sections */
@@ -152,6 +162,7 @@ section {
     padding: 80px 0;
 }
 
+/* Section Title */
 .section-title {
     text-align: center;
     margin-bottom: 60px;
@@ -159,7 +170,7 @@ section {
 
 .section-title h2 {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: #8B5E3C;
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
@@ -168,13 +179,14 @@ section {
 .underline {
     width: 80px;
     height: 3px;
-    background-color: #16a085;
+    background-color: #C4A69F;
+    /* dusty rose accent */
     margin: 0 auto 20px;
 }
 
 .section-title p {
     font-size: 1.2rem;
-    color: #7f8c8d;
+    color: #7A715C;
 }
 
 /* Family Intro */
@@ -187,7 +199,9 @@ section {
 
 .family-text {
     flex: 1;
+    text-align: justify;
     min-width: 300px;
+    color: #4B3F36;
 }
 
 .family-text p {
@@ -203,18 +217,20 @@ section {
 
 .image-placeholder {
     height: 400px;
-    background-color: #ecf0f1;
+    background-color: #EDE1D0;
+    /* subtle taupe cream */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    color: #7f8c8d;
+    border-radius: 15px;
+    color: #7A715C;
     font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* Family Members */
 .family-members {
-    background-color: #f8f9fa;
+    background-color: #FFF8F0;
 }
 
 .members-grid {
@@ -224,10 +240,10 @@ section {
 }
 
 .member-card {
-    background: white;
-    border-radius: 10px;
+    background: #F5F0E1;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
@@ -266,17 +282,17 @@ section {
     left: 0;
     width: 100%;
     padding: 20px;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    color: white;
+    background: linear-gradient(transparent, rgba(75, 63, 54, 0.85));
+    color: #FFF8F0;
 }
 
 .member-overlay h3 {
     margin-bottom: 5px;
-    color: white;
+    color: #FFF8F0;
 }
 
 .member-overlay p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 248, 240, 0.8);
 }
 
 .member-info {
@@ -284,27 +300,27 @@ section {
 }
 
 .member-info h4 {
-    color: #16a085;
+    color: #8B5E3C;
     margin-bottom: 10px;
 }
 
 /* CTA Section */
 .cta-section {
     text-align: center;
-    background-color: #2c3e50;
-    color: white;
+    background-color: #8B5E3C;
+    color: #FFF8F0;
+    padding: 80px 0;
 }
 
 .cta-section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: white;
 }
 
 .cta-section p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .cta-buttons {
@@ -322,34 +338,35 @@ section {
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .btn-primary {
-    background-color: #16a085;
-    color: white;
+    background-color: #8B5E3C;
+    color: #FFF8F0;
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: white;
-    border: 2px solid white;
+    color: #FFF8F0;
+    border: 2px solid #FFF8F0;
 }
 
 .btn-primary:hover {
-    background-color: #1abc9c;
+    background-color: #A67C57;
     transform: translateY(-3px);
 }
 
 .btn-secondary:hover {
-    background-color: white;
-    color: #2c3e50;
+    background-color: #FFF8F0;
+    color: #8B5E3C;
     transform: translateY(-3px);
 }
 
 /* Footer */
 .footer {
-    background-color: #34495e;
-    color: white;
+    background-color: #7A715C;
+    color: #FFF8F0;
     text-align: center;
     padding: 40px 0;
 }
@@ -393,7 +410,7 @@ section {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: white;
+        background-color: #FFF8F0;
         transition: 0.3s;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
