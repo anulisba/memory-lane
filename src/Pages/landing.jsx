@@ -40,7 +40,7 @@ const MemorialWebsite = () => {
     return (
         <div className="memorial-website">
             {/* Header */}
-            <header className="header">
+            {/* <header className="header">
                 <div className="container">
                     <div className="logo">
                         <h1>Memory Lane</h1>
@@ -48,8 +48,8 @@ const MemorialWebsite = () => {
                     <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
                         <ul>
                             <li><a href="#home">Home</a></li>
-                            {/* <li><a href="#family">Our Family</a></li>
-                            <li><a href="#members">Family Members</a></li> */}
+                            <li><a href="#family">Our Family</a></li>
+                            <li><a href="#members">Family Members</a></li>
                             <li><a href="#gallery">Gallery</a></li>
                             <li><a href="#timeline">Timeline</a></li>
                         </ul>
@@ -60,10 +60,10 @@ const MemorialWebsite = () => {
                         <span></span>
                     </button>
                 </div>
-            </header>
+            </header> */}
 
             {/* Hero Section */}
-            <section id="home" className="hero">
+            {/* <section id="home" className="hero">
                 <div className="hero-overlay"></div>
                 <div className="hero-content">
                     <h2>In Loving Memory</h2>
@@ -71,10 +71,34 @@ const MemorialWebsite = () => {
                     <p>Honoring our beloved Madathinakath family members who have passed away</p>
                     <button className="cta-button" onClick={viewGallery}>Explore Their Stories</button>
                 </div>
-            </section>
+            </section> */}
+            {/* <section id="members" className="family-members">
+                <div className="container">
+                    <div className="section-title">
+                        <h2>ഞങ്ങളുടെ പ്രിയപ്പെട്ടവരുടെ സ്മരണയിൽ</h2>
+                        <div className="underline"></div>
 
+                    </div>
+                    <div className="members-grid">
+                        {familyMembers.map((member, index) => (
+                            <div key={member.id} className={`member-card ${visibleCards.includes(index) ? 'visible' : ''}`}>
+                                <div className="member-image">
+                                    <img src={member.image} alt={member.name} />
+                                    <div className="member-overlay">
+
+                                    </div>
+                                </div>
+                                <div className="member-info">
+                                    <h3>{member.name}</h3>
+                                    <p>{member.years}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section> */}
             {/* Family Story */}
-            <section id="family" className="family-intro">
+            {/* <section id="family" className="family-intro">
                 <div className="container">
                     <div className="section-title">
                         <h2>Our Family Story</h2>
@@ -98,10 +122,10 @@ const MemorialWebsite = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Family Members */}
-            <section id="members" className="family-members">
+            {/* <section id="members" className="family-members">
                 <div className="container">
                     <div className="section-title">
                         <h2>Remembering Our Loved Ones</h2>
@@ -125,27 +149,33 @@ const MemorialWebsite = () => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* CTA Section */}
-            <section className="cta-section">
+            {/* <section className="cta-section">
                 <div className="container">
-                    <h2>Preserving Our Family Heritage</h2>
-                    <p>Explore our family's journey through generations</p>
-                    <div className="cta-buttons">
+                    <h2>വിശ്വസിക്കുന്നവൻ ഒരിക്കലും മരിക്കയില്ല</h2>
+                    <p>
+                        യേശു അവളോടു പറഞ്ഞു: പുനരുത്ഥാനവും ജീവനും ഞാനാകുന്നു;
+                        എന്നിൽ വിശ്വസിക്കുന്നവൻ മരിച്ചാലും ജീവിക്കും;
+                        ജീവിച്ചുകൊണ്ടു എന്നിൽ വിശ്വസിക്കുന്നവൻ ഒരിക്കലും മരിക്കയില്ല.”
+                        (യോഹന്നാൻ 11:25-26)
+                    </p>
+                     <div className="cta-buttons">
                         <button className="btn-primary" onClick={viewGallery}>View Gallery</button>
                         <button className="btn-secondary" onClick={viewTimeline}>Family Timeline</button>
                     </div>
                 </div>
-            </section>
+            </section> */}
+
 
             {/* Footer */}
-            <footer className="footer">
+            {/* <footer className="footer">
                 <div className="container">
                     <p>&copy; {new Date().getFullYear()} Smith Family Memorial. All rights reserved.</p>
                     <p>Created with love by the Smith family</p>
                 </div>
-            </footer>
+            </footer> */}
         </div>
     );
 };

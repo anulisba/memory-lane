@@ -1,0 +1,25 @@
+:root {
+    --color-text-dark: #4B3F36;
+    /* dark brown text */
+    --color-text-light: #7A715C;
+    /* taupe */
+    --color-primary: #8B5E3C;
+    /* warm brown */
+    --color-primary-hover: #A67C57;
+    /* lighter warm brown */
+    --color-accent: #C4A69F;
+    /* dusty rose */
+    --color-bg-light: #FFF8F0;
+    /* warm cream */
+    --color-bg-soft: #EDE1D0;
+    /* subtle taupe cream */
+    --color-bg-section: #F5F0E1;
+    /* light beige */
+    --color-header-bg: rgba(245, 240, 225, 0.95);
+    /* soft beige */
+    --color-footer-bg: #7A715C;
+    /* footer background */
+    --color-overlay: rgba(255, 248, 240, 0.3);
+    --color-shadow: rgba(0, 0, 0, 0.08);
+    --color-shadow-dark: rgba(0, 0, 0, 0.15);
+}

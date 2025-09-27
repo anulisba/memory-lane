@@ -1,4 +1,7 @@
-/* MemorialWebsite.css - Updated Elegant Theme */
+/* MemorialWebsite.css - Updated with CSS Variables */
+
+/* Color Variables */
+
 
 /* Base Styles */
 * {
@@ -10,10 +13,8 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #4B3F36;
-    /* dark brown text */
-    background-color: #FFF8F0;
-    /* warm cream */
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light);
 }
 
 .container {
@@ -29,9 +30,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(245, 240, 225, 0.95);
-    /* soft beige */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    background-color: var(--color-header-bg);
+    box-shadow: 0 2px 10px var(--color-shadow);
     z-index: 1000;
     padding: 15px 0;
 }
@@ -44,8 +44,7 @@ body {
 
 .logo h1 {
     font-size: 1.6rem;
-    color: #8B5E3C;
-    /* warm brown */
+    color: var(--color-primary);
     font-weight: 600;
 }
 
@@ -60,15 +59,13 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: #7A715C;
-    /* taupe */
+    color: var(--color-text-light);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav a:hover {
-    color: #C4A69F;
-    /* dusty rose accent */
+    color: var(--color-accent);
 }
 
 .menu-toggle {
@@ -82,7 +79,7 @@ body {
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background-color: #7A715C;
+    background-color: var(--color-text-light);
     margin: 3px 0;
     transition: 0.3s;
 }
@@ -94,9 +91,9 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: linear-gradient(135deg, #FFF8F0 0%, #EDE1D0 100%);
+    background: linear-gradient(135deg, var(--color-bg-light) 0%, var(--color-bg-soft) 100%);
     text-align: center;
-    color: #4B3F36;
+    color: var(--color-text-dark);
     margin-top: 60px;
     overflow: hidden;
 }
@@ -112,28 +109,26 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 10px;
-    color: #7A715C;
+    color: var(--color-text-light);
 }
 
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 700;
-    color: #8B5E3C;
+    color: var(--color-primary);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: #7A715C;
+    color: var(--color-text-light);
 }
 
 .cta-button {
     padding: 12px 30px;
-    background-color: #8B5E3C;
-    /* warm brown */
-    color: #FFF8F0;
-    /* soft beige text */
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
     border: none;
     border-radius: 30px;
     font-size: 1rem;
@@ -143,7 +138,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #A67C57;
+    background-color: var(--color-primary-hover);
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(139, 94, 60, 0.5);
 }
@@ -154,7 +149,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 248, 240, 0.3);
+    background: var(--color-overlay);
 }
 
 /* Sections */
@@ -169,8 +164,8 @@ section {
 }
 
 .section-title h2 {
-    font-size: 2.5rem;
-    color: #8B5E3C;
+    font-size: 1.8rem;
+    color: var(--color-primary);
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
@@ -179,14 +174,13 @@ section {
 .underline {
     width: 80px;
     height: 3px;
-    background-color: #C4A69F;
-    /* dusty rose accent */
+    background-color: var(--color-accent);
     margin: 0 auto 20px;
 }
 
 .section-title p {
     font-size: 1.2rem;
-    color: #7A715C;
+    color: var(--color-text-light);
 }
 
 /* Family Intro */
@@ -201,7 +195,7 @@ section {
     flex: 1;
     text-align: justify;
     min-width: 300px;
-    color: #4B3F36;
+    color: var(--color-text-dark);
 }
 
 .family-text p {
@@ -217,20 +211,20 @@ section {
 
 .image-placeholder {
     height: 400px;
-    background-color: #EDE1D0;
-    /* subtle taupe cream */
+    background-color: var(--color-bg-soft);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 15px;
-    color: #7A715C;
+    color: var(--color-text-light);
     font-size: 1.2rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px var(--color-shadow);
 }
 
 /* Family Members */
 .family-members {
-    background-color: #FFF8F0;
+    background-color: var(--color-bg-light);
+    margin-top: 60px;
 }
 
 .members-grid {
@@ -240,10 +234,10 @@ section {
 }
 
 .member-card {
-    background: #F5F0E1;
+    background: var(--color-bg-section);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px var(--color-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
@@ -256,7 +250,7 @@ section {
 
 .member-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px var(--color-shadow-dark);
 }
 
 .member-image {
@@ -283,12 +277,12 @@ section {
     width: 100%;
     padding: 20px;
     background: linear-gradient(transparent, rgba(75, 63, 54, 0.85));
-    color: #FFF8F0;
+    color: var(--color-bg-light);
 }
 
 .member-overlay h3 {
     margin-bottom: 5px;
-    color: #FFF8F0;
+    color: var(--color-bg-light);
 }
 
 .member-overlay p {
@@ -300,20 +294,20 @@ section {
 }
 
 .member-info h4 {
-    color: #8B5E3C;
+    color: var(--color-primary);
     margin-bottom: 10px;
 }
 
 /* CTA Section */
 .cta-section {
     text-align: center;
-    background-color: #8B5E3C;
-    color: #FFF8F0;
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
     padding: 80px 0;
 }
 
 .cta-section h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
@@ -338,35 +332,35 @@ section {
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px var(--color-shadow);
 }
 
 .btn-primary {
-    background-color: #8B5E3C;
-    color: #FFF8F0;
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #FFF8F0;
-    border: 2px solid #FFF8F0;
+    color: var(--color-bg-light);
+    border: 2px solid var(--color-bg-light);
 }
 
 .btn-primary:hover {
-    background-color: #A67C57;
+    background-color: var(--color-primary-hover);
     transform: translateY(-3px);
 }
 
 .btn-secondary:hover {
-    background-color: #FFF8F0;
-    color: #8B5E3C;
+    background-color: var(--color-bg-light);
+    color: var(--color-primary);
     transform: translateY(-3px);
 }
 
 /* Footer */
 .footer {
-    background-color: #7A715C;
-    color: #FFF8F0;
+    background-color: var(--color-footer-bg);
+    color: var(--color-bg-light);
     text-align: center;
     padding: 40px 0;
 }
@@ -410,9 +404,9 @@ section {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: #FFF8F0;
+        background-color: var(--color-bg-light);
         transition: 0.3s;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 10px var(--color-shadow);
     }
 
     .nav-open {
