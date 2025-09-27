@@ -34,7 +34,7 @@ const SplashScreen = () => {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.5, duration: 1 }}
                     >
-                        പ്രിയപ്പെട്ടവരുടെ സ്നേഹസ്മരണയിൽ
+                        Honoring the Beloved Past Members of the Madathinakath Family
                     </motion.p>
                 </motion.div>
             )}
