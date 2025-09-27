@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&family=Noto+Serif+Malayalam:wght@100..900&display=swap');
+
 :root {
     --color-text-dark: #4B3F36;
     /* dark brown text */
     --color-text-light: #7A715C;
     /* taupe */
-    --color-primary: #8B5E3C;
+    --color-primary: #4d2e16;
     /* warm brown */
     --color-primary-hover: #A67C57;
     /* lighter warm brown */
@@ -17,7 +19,7 @@
     /* light beige */
     --color-header-bg: rgba(245, 240, 225, 0.95);
     /* soft beige */
-    --color-footer-bg: #7A715C;
+    --color-footer-bg: #4d2e16;
     /* footer background */
     --color-overlay: rgba(255, 248, 240, 0.3);
     --color-shadow: rgba(0, 0, 0, 0.08);

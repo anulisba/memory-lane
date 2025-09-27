@@ -10,21 +10,59 @@ const MemorialWebsite = () => {
     const familyMembers = [
         {
             id: 1,
-            name: "John Smith",
-            years: "1925-2008",
+            name: "ചാക്കോ മഠത്തിനകത്ത്",
+            years: "13/08/1904 - 14/10/1983",
             role: "Beloved Grandfather",
             description: "John was a war veteran and dedicated family man who loved gardening and storytelling.",
-            image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758988545/WhatsApp_Image_2025-09-27_at_9.20.45_PM_wtkpsw.jpg"
         },
         {
             id: 2,
-            name: "Mary Smith",
-            years: "1930-2015",
+            name: "ഏലമ്മ ചാക്കോ",
+            years: "08/11/1909 - 02/06/1985",
             role: "Loving Grandmother",
             description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
-            image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758989010/WhatsApp_Image_2025-09-27_at_9.25.24_PM_1_k7wgyp.jpg"
         },
-        // Add more family members here
+        {
+            id: 3,
+            name: "അബ്രഹാം മഠത്തിനകത്ത് (പാപ്പച്ചൻ)",
+            years: "18/08/1926 - 26/12/2011",
+            role: "Loving Grandmother",
+            description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758989010/WhatsApp_Image_2025-09-27_at_9.25.24_PM_1_k7wgyp.jpg"
+        }, {
+            id: 4,
+            name: "ഏലിക്കുട്ടി",
+            years: "22/02/1928 - 2/10/1998",
+            role: "Loving Grandmother",
+            description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758989010/WhatsApp_Image_2025-09-27_at_9.25.24_PM_1_k7wgyp.jpg"
+        },
+        {
+            id: 5,
+            name: "അബ്രഹാം എം. എ (സോമൻ)",
+            years: "09/02/1961 - 25/05/2025",
+            role: "Loving Grandmother",
+            description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758993906/WhatsApp_Image_2025-09-27_at_10.54.22_PM_twvz1u.jpg"
+        },
+        {
+            id: 6,
+            name: "തോമസ് എം. എ (ബാബു)",
+            years: "05/10/1963 - 22/09/2017",
+            role: "Loving Grandmother",
+            description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994716/WhatsApp_Image_2025-09-27_at_11.07.53_PM_zd26q1.jpg"
+        },
+        {
+            id: 7,
+            name: "ഏലി",
+            years: "",
+            role: "Loving Grandmother",
+            description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994782/WhatsApp_Image_2025-09-27_at_10.22.50_PM_knfth6.jpg"
+        }
     ];
 
     const viewGallery = () => navigate('/gallery');
@@ -40,18 +78,16 @@ const MemorialWebsite = () => {
     return (
         <div className="memorial-website">
             {/* Header */}
-            {/* <header className="header">
+            <header className="header">
                 <div className="container">
                     <div className="logo">
                         <h1>Memory Lane</h1>
                     </div>
                     <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#family">Our Family</a></li>
-                            <li><a href="#members">Family Members</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#timeline">Timeline</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/">Gallery</a></li>
+                            <li><a href="/">Timeline</a></li>
                         </ul>
                     </nav>
                     <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -60,7 +96,7 @@ const MemorialWebsite = () => {
                         <span></span>
                     </button>
                 </div>
-            </header> */}
+            </header>
 
             {/* Hero Section */}
             {/* <section id="home" className="hero">
@@ -72,7 +108,7 @@ const MemorialWebsite = () => {
                     <button className="cta-button" onClick={viewGallery}>Explore Their Stories</button>
                 </div>
             </section> */}
-            {/* <section id="members" className="family-members">
+            <section id="members" className="family-members">
                 <div className="container">
                     <div className="section-title">
                         <h2>ഞങ്ങളുടെ പ്രിയപ്പെട്ടവരുടെ സ്മരണയിൽ</h2>
@@ -96,12 +132,12 @@ const MemorialWebsite = () => {
                         ))}
                     </div>
                 </div>
-            </section> */}
+            </section>
             {/* Family Story */}
-            {/* <section id="family" className="family-intro">
+            <section id="family" className="family-intro">
                 <div className="container">
                     <div className="section-title">
-                        <h2>Our Family Story</h2>
+                        <h2>കാലങ്ങളിലൂടെ കുടുംബം</h2>
                         <div className="underline"></div>
                     </div>
                     <div className="family-content">
@@ -110,7 +146,7 @@ const MemorialWebsite = () => {
                                 മഠത്തിനകത്ത് തൊമ്മൻ്റെയും ഏലിയുടെയും മകനായ ചാക്കോ തോക്കനാട്ട് കുടുംബത്തിലെ ഏലമ്മയെ (ഏലി ) വിവാഹം കഴിച്ച് കുടുംബമായി താമസിച്ചു കൊണ്ടിരുന്നകാഞ്ഞിരപ്പള്ളിയിൽ നിന്നും എലിക്കുളത്തേയ്ക്ക് വന്ന് താമസമാക്കിയതിനുശേഷം അവിടെ നിന്നും 1947-ൽ മലബാറിലെ പെരുവണ്ണാമൂഴിയിൽ വന്ന് താമസം സ്ഥിരപ്പെടുത്തുകയും പെരൂവണ്ണാമൂഴി ഇടവകാംഗമായി ജീവിക്കുകയും ചെയ്തു. ചാക്കോ-ഏലമ്മ ദമ്പതികൾക്ക് 5 ആൺമക്കളും 3 പെൺമക്കളുമാണ് ഉണ്ടായിരുന്നത്.  മക്കളും പേരക്കുട്ടികളുമായി കുറെ കുടുംബങ്ങൾ പെരുവണ്ണാമുഴിയിലും ചെമ്പനോടയിലുമായി താമസ്സിക്കുന്നു.
                             </p>
                             <p>
-                                ചാക്കോയുടെ ഏലിയുടെയും രണ്ടാമത്തെ മകനായ പാപ്പച്ചൻ ചക്കിട്ടപാറ ചേന്നം പള്ളി കുടുംബാംഗമായ വർഗ്ഗീസ് അന്നമ്മ ദമ്പതികളുടെ മകളായ ഏലിക്കുട്ടിയെ വിവാഹം കഴിച്ച് പെരുവണ്ണാമൂഴിയിൽ തന്നെ താമസമാക്കുകയും ചെയ്തു.അവർക്കു ദൈവം ഒൻപതു ആണ്മക്കളെയും ഒരു മകളെയും നൽകി. അവർ കഠിനാദ്ധ്വാനത്തിലൂടെയും സ്ഥിരോത്സഹത്തിലൂടെയും ധാരാളം കൃഷി സ്ഥലങ്ങൾ ചെമ്പനോടയിലും പെരുവണ്ണാമൂഴിയിലുമായി സ്വന്തമാക്കി. പകർച്ചവ്യാധികളേയും കാട്ടുമൃഗങ്ങളേയും ചെറുത്ത് തോൽപ്പിച്ച് കൃഷി ചെയ്ത് നല്ല വിളവുകൾ നേടി. അക്കാലഘട്ടങ്ങളിൽ പള്ളിയുടെയും സ്ക്കൂളിൻ്റെയും നിർമ്മാണ പ്രവർത്തനങ്ങളിലും അത്മീയ കാര്യങ്ങളിലും താല്പര്യപൂർവ്വം പങ്കു ചേരുകയും ചില വർഷങ്ങളിൽ പള്ളിയുടെ കൈക്കാരനായിപ്രവർത്തിക്കുയും അതുകൂടാതെ ഇന്ന് പെരുവണ്ണാമൂഴി വട്ടക്കയം പുഴയോരത്തുകൂടി കടന്നുപോകുന്ന റോഡിൻ്റെ നിർമ്മാണത്തിന് ശ്രദ്ധേയമായ പങ്കുവഹിക്കുയും ചെയ്തിരുന്നു .
+                                ചാക്കോയുടെ ഏലിയുടെയും രണ്ടാമത്തെ മകനായ പാപ്പച്ചൻ ചക്കിട്ടപാറ ചേന്നം പള്ളി കുടുംബാംഗമായ വർഗ്ഗീസ് അന്നമ്മ ദമ്പതികളുടെ മകളായ ഏലിക്കുട്ടിയെ വിവാഹം കഴിച്ച് പെരുവണ്ണാമൂഴിയിൽ തന്നെ താമസമാക്കുകയും ചെയ്തു. അവർക്കു ദൈവം ഒൻപതു ആണ്മക്കളെയും ഒരു മകളെയും നൽകി. അവർ കഠിനാദ്ധ്വാനത്തിലൂടെയും സ്ഥിരോത്സഹത്തിലൂടെയും ധാരാളം കൃഷി സ്ഥലങ്ങൾ ചെമ്പനോടയിലും പെരുവണ്ണാമൂഴിയിലുമായി സ്വന്തമാക്കി. പകർച്ചവ്യാധികളേയും കാട്ടുമൃഗങ്ങളേയും ചെറുത്ത് തോൽപ്പിച്ച് കൃഷി ചെയ്ത്  നല്ല വിളവുകൾ നേടി. ആ കാലഘട്ടങ്ങളിൽ പള്ളിയുടെയും സ്കൂളിൻ്റെയും നിർമ്മാണ പ്രവർത്തനങ്ങളിലും ആത്മീയകാര്യങ്ങളിലും താല്പര്യപൂർവ്വം പങ്കുചേരുകയും ചില വർഷങ്ങളിൽ പള്ളിയുടെ കൈക്കാരനായിപ്രവർത്തിക്കുയും ചെയ്തു .അതുകൂടാതെ ഇന്ന് പെരുവണ്ണാമൂഴി വട്ടക്കയം പുഴയോരത്തുകൂടി കടന്നുപോകുന്ന റോഡിൻ്റെ നിർമ്മാണത്തിന് ശ്രദ്ധേയമായ പങ്കുവഹിക്കുയും ചെയ്തിരുന്നു
                             </p>
                             <p>
                                 പാപ്പച്ചൻ (അബ്രാഹം) ഏലിക്കുട്ടി ദമ്പതികളുടെ പത്തു മക്കളിൽ പേരറിയാത്ത ഒരാൾ, ജോർജ്, സെലി, വിജയൻ, സോമൻ, ബാബു എന്നിവർ കർത്താവിൽ നിദ്ര പ്രാപിച്ചു.
@@ -122,7 +158,7 @@ const MemorialWebsite = () => {
                         </div>
                     </div>
                 </div>
-            </section> */}
+            </section>
 
             {/* Family Members */}
             {/* <section id="members" className="family-members">
@@ -152,7 +188,7 @@ const MemorialWebsite = () => {
             </section> */}
 
             {/* CTA Section */}
-            {/* <section className="cta-section">
+            <section className="cta-section">
                 <div className="container">
                     <h2>വിശ്വസിക്കുന്നവൻ ഒരിക്കലും മരിക്കയില്ല</h2>
                     <p>
@@ -161,21 +197,25 @@ const MemorialWebsite = () => {
                         ജീവിച്ചുകൊണ്ടു എന്നിൽ വിശ്വസിക്കുന്നവൻ ഒരിക്കലും മരിക്കയില്ല.”
                         (യോഹന്നാൻ 11:25-26)
                     </p>
-                     <div className="cta-buttons">
-                        <button className="btn-primary" onClick={viewGallery}>View Gallery</button>
-                        <button className="btn-secondary" onClick={viewTimeline}>Family Timeline</button>
+
+                    {/* Minimal Cross */}
+                    <div className="minimal-cross">
+                        <svg width="30" height="40" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="15" y1="0" x2="15" y2="60" stroke="#F0EDE6" strokeWidth="2" />
+                            <line x1="0" y1="15" x2="30" y2="15" stroke="#F0EDE6" strokeWidth="2" />
+                        </svg>
                     </div>
                 </div>
-            </section> */}
+            </section>
+
 
 
             {/* Footer */}
-            {/* <footer className="footer">
+            <footer className="footer">
                 <div className="container">
-                    <p>&copy; {new Date().getFullYear()} Smith Family Memorial. All rights reserved.</p>
-                    <p>Created with love by the Smith family</p>
+                    <p>Created with love by the Madathinakath family</p>
                 </div>
-            </footer> */}
+            </footer>
         </div>
     );
 };
