@@ -26,12 +26,13 @@ const MemorialWebsite = () => {
         },
         {
             id: 3,
-            name: "അബ്രഹാം മഠത്തിനകത്ത് (പാപ്പച്ചൻ)",
+            name: "അബ്രാഹം മഠത്തിനകത്ത് (പാപ്പച്ചൻ)",
             years: "18/08/1926 - 26/12/2011",
             role: "Loving Grandmother",
             description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
             image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759066641/Untitled_design_17_jzd9go.png"
-        }, {
+        },
+        {
             id: 4,
             name: "ഏലിക്കുട്ടി",
             years: "22/02/1928 - 2/10/1998",
@@ -41,7 +42,7 @@ const MemorialWebsite = () => {
         },
         {
             id: 5,
-            name: "അബ്രഹാം എം. എ (സോമൻ)",
+            name: "അബ്രാഹം എം. എ (സോമൻ)",
             years: "09/02/1961 - 25/05/2025",
             role: "Loving Grandmother",
             description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
@@ -99,18 +100,7 @@ const MemorialWebsite = () => {
                     <div className="logo">
                         <h1>Memory Lane</h1>
                     </div>
-                    <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/gallery">Gallery</a></li>
-                            <li><a href="/timeline">Timeline</a></li>
-                        </ul>
-                    </nav>
-                    <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+
                 </div>
             </header>
             {/* Secondary Navbar for CTA buttons */}

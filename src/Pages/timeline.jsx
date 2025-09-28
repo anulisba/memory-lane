@@ -1,103 +1,144 @@
 // Timeline.jsx
 import React, { useState, useEffect } from 'react';
 import './timeline.css';
+import { useNavigate } from 'react-router-dom';
 
 const Timeline = () => {
     const [activeYear, setActiveYear] = useState(null);
     const [isVisible, setIsVisible] = useState(false);
-
+    const navigate = useNavigate();
     // Sample timeline data - replace with your actual family information
     const familyTimeline = [
         {
-            year: 1920,
-            title: "Birth of Great Grandfather",
-            description: "John Smith Sr. was born in Springfield. He would later become the family patriarch and establish the family business.",
-            image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-            members: ["Great Grandfather"]
+            year: 1904,
+            title: "ജനനം",
+            description: "ചാക്കോ മഠത്തിനകത്ത്",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758988545/WhatsApp_Image_2025-09-27_at_9.20.45_PM_wtkpsw.jpg",
         },
         {
-            year: 1925,
-            title: "Birth of Great Grandmother",
-            description: "Mary Johnson was born in Oakville. She met John at a community dance in 1945.",
-            image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+            year: 1909,
+            title: "ജനനം",
+            description: "ഏലമ്മ ചാക്കോ",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758989010/WhatsApp_Image_2025-09-27_at_9.25.24_PM_1_k7wgyp.jpg",
             members: ["Great Grandmother"]
         },
         {
-            year: 1948,
-            title: "Great Grandparents' Wedding",
-            description: "John and Mary married in a beautiful ceremony at St. Mary's Church. The reception was held at the family farm.",
+            year: 1926,
+            title: "ജനനം",
+            description: "അബ്രാഹം മഠത്തിനകത്ത് (പാപ്പച്ചൻ)",
             image: "https://images.unsplash.com/photo-1579118123582-366e837c2d2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
             members: ["Great Grandfather", "Great Grandmother"]
         },
         {
-            year: 1950,
-            title: "Birth of Grandfather",
-            description: "Robert Smith was born, the first child of John and Mary. He would later take over the family business.",
+            year: 1928,
+            title: "ജനനം ",
+            description: "ഏലിക്കുട്ടി (ചക്കിട്ടപാറ)",
             image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
             members: ["Grandfather"]
         },
         {
-            year: 1955,
-            title: "Birth of Uncle 1",
-            description: "James Smith was born, the second son of John and Mary. He would become a respected teacher in the community.",
+            year: 1947,
+            title: "മലബറിലേക്ക് കുടിയേറി (പെരുവണ്ണാമൂഴി)",
+            description: "",
             image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
             members: ["Uncle 1"]
         },
         {
-            year: 1960,
-            title: "Birth of Uncle 2",
-            description: "William Smith was born, the youngest son of John and Mary. He moved to the city to pursue a career in medicine.",
-            image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+            year: 1961,
+            title: "ജനനം",
+            description: "അബ്രാഹം എം. എ (സോമൻ)",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758993906/WhatsApp_Image_2025-09-27_at_10.54.22_PM_twvz1u.jpg",
             members: ["Uncle 2"]
         },
         {
-            year: 1980,
-            title: "Grandfather's Marriage",
-            description: "Robert Smith married Elizabeth Brown in a summer ceremony. They honeymooned in the mountains.",
-            image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+            year: 1963,
+            title: "ജനനം",
+            description: "തോമസ് എം. എ (ബാബു)",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994716/WhatsApp_Image_2025-09-27_at_11.07.53_PM_zd26q1.jpg",
             members: ["Grandfather", "Grandmother"]
         },
         {
+            year: 1983,
+            title: "മരണം",
+            description: "ചാക്കോ മഠത്തിനകത്ത്",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758988545/WhatsApp_Image_2025-09-27_at_9.20.45_PM_wtkpsw.jpg",
+        },
+        {
             year: 1985,
-            title: "Birth of Child 1",
-            description: "Michael Smith was born, the first child of Robert and Elizabeth. He was born on a snowy winter morning.",
-            image: "https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-            members: ["Child 1"]
+            title: "മരണം",
+            description: "ഏലമ്മ ചാക്കോ",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758989010/WhatsApp_Image_2025-09-27_at_9.25.24_PM_1_k7wgyp.jpg",
+            members: ["Great Grandmother"]
         },
         {
             year: 1988,
-            title: "Birth of Child 2",
-            description: "Sarah Smith was born, the second child of Robert and Elizabeth. She arrived just as spring flowers were blooming.",
-            image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-            members: ["Child 2"]
-        },
-        {
-            year: 1992,
-            title: "Birth of Child 3",
-            description: "David Smith was born, the third child of Robert and Elizabeth. He was the smallest of the newborns but grew quickly.",
-            image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+            title: "ജനനം ",
+            description: "ഏലിക്കുട്ടി",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994782/WhatsApp_Image_2025-09-27_at_10.22.50_PM_knfth6.jpg",
             members: ["Child 3"]
         },
         {
-            year: 1995,
-            title: "Birth of Child 4",
-            description: "Emily Smith was born, the youngest child of Robert and Elizabeth. She completed the family.",
-            image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-            members: ["Child 4"]
+            year: 1989,
+            title: "മരണം",
+            description: "ഏലിക്കുട്ടി",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994782/WhatsApp_Image_2025-09-27_at_10.22.50_PM_knfth6.jpg",
+            members: ["Child 3"]
         },
         {
-            year: 2008,
-            title: "Passing of Great Grandfather",
-            description: "John Smith Sr. passed away peacefully surrounded by family. His legacy lived on through his children and grandchildren.",
-            image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+            year: 1990,
+            title: " ജനനം",
+            description: "മേരി",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759066641/Untitled_design_17_jzd9go.png",
             members: ["Great Grandfather"]
         },
         {
-            year: 2015,
-            title: "Passing of Great Grandmother",
-            description: "Mary Smith passed away after a brief illness. She was remembered for her kindness and delicious apple pies.",
-            image: "https://images.unsplash.com/photo-1574362848142-4dde41d53d2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-            members: ["Great Grandmother"]
+            year: 1991,
+            title: "മരണം",
+            description: "മേരി",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759066641/Untitled_design_17_jzd9go.png",
+            members: ["Great Grandfather"]
+        },
+        {
+            year: 1994,
+            title: "ജനനം",
+            description: "അബ്രാഹം",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759066641/Untitled_design_17_jzd9go.png",
+            members: ["Great Grandfather"]
+        },
+        {
+            year: 1995,
+            title: "മരണം",
+            description: "അബ്രാഹം",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759066641/Untitled_design_17_jzd9go.png",
+            members: ["Great Grandfather"]
+        },
+        {
+            year: 1998,
+            title: "മരണം",
+            description: "ഏലിക്കുട്ടി",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994782/WhatsApp_Image_2025-09-27_at_10.22.50_PM_knfth6.jpg",
+            members: ["Great Grandfather"]
+        },
+        {
+            year: 2011,
+            title: "മരണം",
+            description: "അബ്രഹാം മഠത്തിനകത്ത് (പാപ്പച്ചൻ)",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994782/WhatsApp_Image_2025-09-27_at_10.22.50_PM_knfth6.jpg",
+            members: ["Great Grandfather"]
+        },
+        {
+            year: 2017,
+            title: "മരണം",
+            description: "തോമസ് എം. എ (ബാബു)",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994716/WhatsApp_Image_2025-09-27_at_11.07.53_PM_zd26q1.jpg",
+            members: ["Great Grandfather"]
+        },
+        {
+            year: 2025,
+            title: "മരണം",
+            description: "അബ്രാഹം എം. എ (സോമൻ)",
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758993906/WhatsApp_Image_2025-09-27_at_10.54.22_PM_twvz1u.jpg",
+            members: ["Great Grandfather"]
         }
     ];
 
@@ -117,15 +158,34 @@ const Timeline = () => {
         }
     };
 
+    const viewGallery = () => navigate('/gallery');
+    const viewHome = () => navigate('/')
+
     return (
         <div className="timeline-page">
             {/* Header */}
-            <header className="timeline-header">
+            <header className="header">
+                <div className="container">
+                    <div className="logo">
+                        <h1>Memory Lane</h1>
+                    </div>
+
+                </div>
+            </header>
+            {/* Secondary Navbar for CTA buttons */}
+            <section className="secondary-nav">
+                <div className="container">
+                    <button className="btn-secondary" onClick={viewHome}>Home</button>
+                    <button className="btn-secondary" onClick={viewGallery}>Gallery</button>
+                    <button className="btn-primary">Timeline</button>
+                </div>
+            </section>
+            <div className="timeline-header">
                 <div className="container">
                     <h1>Family Timeline</h1>
                     <p>A journey through our family's history across generations</p>
                 </div>
-            </header>
+            </div>
 
             {/* Timeline Section */}
             <section className="timeline-section">
@@ -139,18 +199,14 @@ const Timeline = () => {
                             >
                                 <div className="event-date">{event.year}</div>
                                 <div className="event-content">
-                                    <h3>{event.title}</h3>
-                                    <div className="event-members">
-                                        {event.members.map((member, i) => (
-                                            <span key={i} className="member-tag">{member}</span>
-                                        ))}
-                                    </div>
+                                    <h3 style={{ margin: "0" }}>{event.title}</h3>
+
                                     <div className="event-description">
-                                        <p>{event.description}</p>
+                                        <h4>{event.description}</h4>
                                     </div>
-                                    <div className="event-image">
+                                    {/* <div className="event-image">
                                         <img src={event.image} alt={event.title} />
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className="event-marker"></div>
                             </div>
@@ -161,7 +217,7 @@ const Timeline = () => {
             </section>
 
             {/* Family Tree Section */}
-            <section className="family-tree-section">
+            {/* <section className="family-tree-section">
                 <div className="container">
                     <div className="section-title">
                         <h2>Family Tree</h2>
@@ -232,12 +288,12 @@ const Timeline = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Footer */}
-            <footer className="timeline-footer">
+            <footer className="footer">
                 <div className="container">
-                    <p>&copy; {new Date().getFullYear()} Smith Family Memorial. All rights reserved.</p>
+                    <p>Created with love by the Madathinakath family</p>
                 </div>
             </footer>
         </div>

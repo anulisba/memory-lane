@@ -3,16 +3,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./splashscreen.css";
 
 const SplashScreen = () => {
-    const [show, setShow] = useState(true);
+    const [step, setStep] = useState(0);
 
     useEffect(() => {
-        const timer = setTimeout(() => setShow(false), 5000); // splash duration
-        return () => clearTimeout(timer);
+        const timers = [
+            setTimeout(() => setStep(1), 3000), // after 3s show caption
+            setTimeout(() => setStep(2), 6000), // after 6s remove splash
+        ];
+
+        return () => timers.forEach(clearTimeout);
     }, []);
 
     return (
         <AnimatePresence>
-            {show && (
+            {step < 2 && (
                 <motion.div
                     className="splash-container"
                     initial={{ opacity: 0 }}
@@ -20,22 +24,32 @@ const SplashScreen = () => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <motion.h1
-                        className="splash-title"
-                        initial={{ y: -30, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 1 }}
-                    >
-                        Memory Lane
-                    </motion.h1>
-                    <motion.p
-                        className="splash-caption"
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.5, duration: 1 }}
-                    >
-                        Honoring the Beloved Members of the Madathinakath Family
-                    </motion.p>
+                    {step === 0 && (
+                        <motion.h1
+                            className="splash-title"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 1 }}
+                        >
+                            Memory Lane
+                        </motion.h1>
+                    )}
+
+                    {step === 1 && (
+                        <motion.p
+                            className="splash-caption"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 1 }}
+                        >
+                            Honoring the Beloved Members of <br />
+                            <img src="https://res.cloudinary.com/dpo91btlc/image/upload/v1759077822/madahinakath_wfdsss.png" />
+                            <br />
+                            Family
+                        </motion.p>
+                    )}
                 </motion.div>
             )}
         </AnimatePresence>

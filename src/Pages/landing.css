@@ -45,8 +45,8 @@ body {
 .logo h1 {
     font-size: 1.6rem;
     color: var(--color-primary);
-    font-weight: 600;
-    font-family: "Balthazar", serif;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 900;
     letter-spacing: 1px;
 }
 

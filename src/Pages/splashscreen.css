@@ -15,8 +15,8 @@
 
 .splash-title {
     font-size: 2.5rem;
-    font-family: "Balthazar", serif;
-    font-weight: 700;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 900;
     letter-spacing: 2px;
     text-align: center;
     color: var(--color-text-dark);
@@ -28,8 +28,14 @@
     text-align: center;
     padding: 20px;
     color: #4B3F36;
-    font-family: "Noto Serif Malayalam", serif;
-    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+}
+
+.splash-caption img {
+    margin-top: 5px;
+    max-width: 100%;
+    height: 30px;
 }
 
 @media (max-width:500px) {
