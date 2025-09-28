@@ -102,8 +102,8 @@ const MemorialWebsite = () => {
                     <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="/">Gallery</a></li>
-                            <li><a href="/">Timeline</a></li>
+                            <li><a href="/gallery">Gallery</a></li>
+                            <li><a href="/timeline">Timeline</a></li>
                         </ul>
                     </nav>
                     <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -113,6 +113,15 @@ const MemorialWebsite = () => {
                     </button>
                 </div>
             </header>
+            {/* Secondary Navbar for CTA buttons */}
+            <section className="secondary-nav">
+                <div className="container">
+                    <button className="btn-primary">Home</button>
+                    <button className="btn-secondary" onClick={viewGallery}>Gallery</button>
+                    <button className="btn-secondary" onClick={viewTimeline}>Timeline</button>
+                </div>
+            </section>
+
 
             {/* Hero Section */}
             {/* <section id="home" className="hero">
@@ -169,7 +178,7 @@ const MemorialWebsite = () => {
                             </p>
                         </div>
                         <div className="family-image">
-                            <img src="https://images.unsplash.com/photo-1529253355930-c5f5f2f9c3f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            <img src="https://res.cloudinary.com/dpo91btlc/image/upload/v1759067552/WhatsApp_Image_2025-09-28_at_7.21.15_PM_hi2yve.jpg"
                                 alt="Family" className="luxury-image" />
                         </div>
                     </div>
