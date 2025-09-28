@@ -19,7 +19,6 @@
 .timeline-header {
     text-align: center;
     padding: 60px 0 40px;
-    background-color: var(--color-header-bg);
 }
 
 .timeline-header h1 {
@@ -39,7 +38,6 @@
 /* Timeline Section */
 .timeline-section {
     padding: 0;
-    background-color: var(--color-bg-section);
 }
 
 .timeline {
