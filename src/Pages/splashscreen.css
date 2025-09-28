@@ -14,7 +14,7 @@
 }
 
 .splash-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: "Poiret One", sans-serif;
     font-weight: 900;
     letter-spacing: 2px;
@@ -40,6 +40,6 @@
 
 @media (max-width:500px) {
     .splash-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 }
