@@ -51,7 +51,7 @@ const MemorialWebsite = () => {
         {
             id: 6,
             name: "തോമസ് എം. എ (ബാബു)",
-            years: "05/10/1963 - 22/09/2017",
+            years: "05/10/1965 - 22/09/2017",
             role: "Loving Grandmother",
             description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
             image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994716/WhatsApp_Image_2025-09-27_at_11.07.53_PM_zd26q1.jpg"

@@ -51,7 +51,7 @@ const Timeline = () => {
             members: ["Uncle 2"]
         },
         {
-            year: 1963,
+            year: 1965,
             title: "ജനനം",
             description: "തോമസ് എം. എ (ബാബു)",
             image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994716/WhatsApp_Image_2025-09-27_at_11.07.53_PM_zd26q1.jpg",
@@ -183,7 +183,7 @@ const Timeline = () => {
             <div className="timeline-header">
                 <div className="container">
                     <h1>Family Timeline</h1>
-                    <p>A journey through our family's history across generations</p>
+
                 </div>
             </div>
 
