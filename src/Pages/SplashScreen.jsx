@@ -45,8 +45,8 @@ const SplashScreen = () => {
                             transition={{ duration: 1 }}
                         >
                             HONORING THE BELOVED MEMBERS OF <br />
-                            {/* <img src="https://res.cloudinary.com/dpo91btlc/image/upload/v1759077822/madahinakath_wfdsss.png" /> */}
-                            MADATHINAKATH
+                            <img src="https://res.cloudinary.com/dpo91btlc/image/upload/v1759077822/madahinakath_wfdsss.png" />
+
                             <br />
                             FAMILY
                         </motion.p>
