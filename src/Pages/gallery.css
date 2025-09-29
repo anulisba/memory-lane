@@ -9,6 +9,7 @@
 .container {
     width: 90%;
     max-width: 1200px;
+
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -46,7 +47,8 @@
 .gallery-item {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px var(--color-shadow);
+    min-height: 70vh;
+    /* box-shadow: 0 5px 15px var(--color-shadow); */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

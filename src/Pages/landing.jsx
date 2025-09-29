@@ -30,7 +30,7 @@ const MemorialWebsite = () => {
             years: "18/08/1926 - 26/12/2011",
             role: "Loving Grandmother",
             description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759066641/Untitled_design_17_jzd9go.png"
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759166015/WhatsApp_Image_2025-09-29_at_9.43.57_PM_c9lxjg.jpg"
         },
         {
             id: 4,
@@ -38,12 +38,12 @@ const MemorialWebsite = () => {
             years: "22/02/1928 - 2/10/1998",
             role: "Loving Grandmother",
             description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758989010/WhatsApp_Image_2025-09-27_at_9.25.24_PM_1_k7wgyp.jpg"
+            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759166017/WhatsApp_Image_2025-09-29_at_9.43.57_PM_1_efir4e.jpg"
         },
         {
             id: 5,
             name: "അബ്രാഹം എം. എ (സോമൻ)",
-            years: "09/02/1961 - 25/05/2025",
+            years: "09/10/1961 - 24/05/2025",
             role: "Loving Grandmother",
             description: "Mary was known for her kindness, delicious cooking, and beautiful embroidery work.",
             image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758993906/WhatsApp_Image_2025-09-27_at_10.54.22_PM_twvz1u.jpg"

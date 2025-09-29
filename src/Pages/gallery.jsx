@@ -108,7 +108,7 @@ const Gallery = () => {
                                 className="gallery-item"
                                 onClick={() => openLightbox(index)}
                             >
-                                <div className="image-container">
+                                {/* <div className="image-container">
                                     <img src={image.src} alt={image.title} />
                                     <div className="image-overlay">
                                         <div className="overlay-content">
@@ -116,7 +116,7 @@ const Gallery = () => {
                                             <p>{image.year}</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         ))}
                     </div>
@@ -155,9 +155,9 @@ const Gallery = () => {
             )}
 
             {/* Footer */}
-            <footer className="gallery-footer">
+            <footer className="footer">
                 <div className="container">
-                    <p>&copy; {new Date().getFullYear()} Smith Family Memorial. All rights reserved.</p>
+                    <p>Created with love by the Madathinakath family</p>
                 </div>
             </footer>
         </div>
