@@ -47,7 +47,6 @@
 .gallery-item {
     border-radius: 10px;
     overflow: hidden;
-    min-height: 70vh;
     /* box-shadow: 0 5px 15px var(--color-shadow); */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;

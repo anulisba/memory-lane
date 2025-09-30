@@ -11,28 +11,35 @@ const Gallery = () => {
     const galleryImages = [
         {
             id: 1,
-            src: "https://images.unsplash.com/photo-1579118123582-366e837c2d2c?auto=format&fit=crop&w=400&q=80",
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759250680/WhatsApp_Image_2025-09-29_at_11.04.23_PM_1_ajiead.jpg",
             title: "Grandparents Wedding Day",
             year: "1955",
             description: "John and Mary on their wedding day at St. Peter's Church"
         },
         {
             id: 2,
-            src: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=400&q=80",
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759250680/WhatsApp_Image_2025-09-28_at_10.43.27_PM_1_krfzd5.jpg",
             title: "Family Reunion 1982",
             year: "1982",
             description: "The entire Smith family gathering at the annual reunion"
         },
         {
             id: 3,
-            src: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=400&q=80",
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759250681/WhatsApp_Image_2025-09-30_at_2.17.36_PM_i2z2o9.jpg",
             title: "50th Anniversary",
             year: "2005",
             description: "Golden anniversary celebration for John and Mary"
         },
         {
             id: 4,
-            src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=400&q=80",
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759250681/WhatsApp_Image_2025-09-28_at_10.57.28_PM_2_byst5w.jpg",
+            title: "Beach Vacation",
+            year: "1998",
+            description: "Family vacation at the beach house in summer '98"
+        },
+        {
+            id: 5,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759250957/WhatsApp_Image_2025-09-30_at_10.17.32_PM_yrbepd.jpg",
             title: "Beach Vacation",
             year: "1998",
             description: "Family vacation at the beach house in summer '98"
@@ -108,15 +115,15 @@ const Gallery = () => {
                                 className="gallery-item"
                                 onClick={() => openLightbox(index)}
                             >
-                                {/* <div className="image-container">
+                                <div className="image-container">
                                     <img src={image.src} alt={image.title} />
-                                    <div className="image-overlay">
+                                    {/* <div className="image-overlay">
                                         <div className="overlay-content">
                                             <h3>{image.title}</h3>
                                             <p>{image.year}</p>
                                         </div>
-                                    </div>
-                                </div> */}
+                                    </div> */}
+                                </div>
                             </div>
                         ))}
                     </div>
