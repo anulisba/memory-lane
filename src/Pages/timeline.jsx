@@ -32,7 +32,7 @@ const Timeline = () => {
         {
             year: 1928,
             title: "ജനനം ",
-            description: "ഏലിക്കുട്ടി (ചക്കിട്ടപാറ)",
+            description: "ഏലിക്കുട്ടി",
             image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
             members: ["Grandfather"]
         },
@@ -293,7 +293,8 @@ const Timeline = () => {
             {/* Footer */}
             <footer className="footer">
                 <div className="container">
-                    <p>Created with love by the Madathinakath family</p>
+                    <p>Created with love by Madathinakath family</p>
+                    <p>Contact us @ eternalroots2020@gmail.com</p>
                 </div>
             </footer>
         </div>

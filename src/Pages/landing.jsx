@@ -228,7 +228,8 @@ const MemorialWebsite = () => {
             {/* Footer */}
             <footer className="footer">
                 <div className="container">
-                    <p>Created with love by the Madathinakath family</p>
+                    <p>Created with love by Madathinakath family</p>
+                    <p>Contact us @ eternalroots2020@gmail.com</p>
                 </div>
             </footer>
         </div>
