@@ -43,6 +43,20 @@ const Gallery = () => {
             title: "Beach Vacation",
             year: "1998",
             description: "Family vacation at the beach house in summer '98"
+        },
+        {
+            id: 6,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759253898/WhatsApp_Image_2025-09-30_at_10.39.55_PM_ts9qdd.jpg",
+            title: "Beach Vacation",
+            year: "1998",
+            description: "Family vacation at the beach house in summer '98"
+        },
+        {
+            id: 7,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759253904/WhatsApp_Image_2025-09-30_at_10.40.21_PM_y3osvn.jpg",
+            title: "Beach Vacation",
+            year: "1998",
+            description: "Family vacation at the beach house in summer '98"
         }
         // ... add more photos here
     ];
