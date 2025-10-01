@@ -164,12 +164,6 @@ const Gallery = () => {
                                 alt={galleryImages[currentImage].title}
                             />
                         </div>
-
-                        <div className="lightbox-caption">
-                            <h3>{galleryImages[currentImage].title}</h3>
-                            <p className="image-year">{galleryImages[currentImage].year}</p>
-                            <p>{galleryImages[currentImage].description}</p>
-                        </div>
                     </div>
                     <div className="lightbox-overlay" onClick={closeLightbox}></div>
                 </div>
