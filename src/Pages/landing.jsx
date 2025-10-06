@@ -94,7 +94,7 @@ const MemorialWebsite = () => {
 
 
     useEffect(() => {
-        const showTimer = setTimeout(() => setShowPopup(true), 3000); // Show after 15s
+        const showTimer = setTimeout(() => setShowPopup(true), 15000); // Show after 15s
         const hideTimer = setTimeout(() => setShowPopup(false), 45000); // Hide after 30s of visibility
 
         return () => {
