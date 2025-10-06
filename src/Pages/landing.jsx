@@ -6,7 +6,7 @@ const MemorialWebsite = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [visibleCards, setVisibleCards] = useState([]);
     const navigate = useNavigate();
-
+    const [showPopup, setShowPopup] = useState(false);
     const familyMembers = [
         {
             id: 1,
@@ -91,6 +91,22 @@ const MemorialWebsite = () => {
         }, 100);
         return () => clearTimeout(timer);
     }, [familyMembers]);
+
+
+    useEffect(() => {
+        const showTimer = setTimeout(() => setShowPopup(true), 3000); // Show after 15s
+        const hideTimer = setTimeout(() => setShowPopup(false), 45000); // Hide after 30s of visibility
+
+        return () => {
+            clearTimeout(showTimer);
+            clearTimeout(hideTimer);
+        };
+    }, []);
+
+    const handleClosePopup = () => setShowPopup(false);
+    const handleWhatsAppRedirect = () => {
+        window.open("https://wa.me/919446914883?text=Hi%2C%20I%20would%20like%20to%20create%20a%20memorial%20website%20for%20my%20loved%20one.", "_blank");
+    };
 
     return (
         <div className="memorial-website">
@@ -229,9 +245,31 @@ const MemorialWebsite = () => {
             <footer className="footer">
                 <div className="container">
                     <p>Created with love by Madathinakath family</p>
-                    <p>Contact us @ eternalroots2020@gmail.com</p>
+                    <p>For Memorial Websites Contact us:</p>
+                    <p>+91 9446914883</p>
+                    <p>eternalroots2020@gmail.com</p>
+
                 </div>
             </footer>
+            {showPopup && (
+                <div className="popup-overlay">
+                    <div className="popup-box">
+                        <button className="popup-close" onClick={handleClosePopup}>×</button>
+                        <h3>Honor the Memory of Your Loved One</h3>
+                        <p>
+                            If you wish to create a memorial website for your loved one who passed away,
+                            we can help you cherish their memories forever
+                        </p>
+                        <div className="popup-footer">
+                            <button className="popup-btn" onClick={handleWhatsAppRedirect}>
+                                Contact Us
+                            </button>
+                            <span className="popup-tagline">— Eternal Roots</span>
+                        </div>
+                    </div>
+                </div>
+            )}
+
         </div>
     );
 };

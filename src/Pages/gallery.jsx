@@ -173,7 +173,10 @@ const Gallery = () => {
             <footer className="footer">
                 <div className="container">
                     <p>Created with love by Madathinakath family</p>
-                    <p>Contact us @ eternalroots2020@gmail.com</p>
+                    <p>For Memorial Websites Contact us:</p>
+                    <p>+91 9446914883</p>
+                    <p>eternalroots2020@gmail.com</p>
+
                 </div>
             </footer>
         </div>
